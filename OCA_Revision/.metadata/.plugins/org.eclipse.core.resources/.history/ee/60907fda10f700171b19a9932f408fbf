@@ -1,0 +1,74 @@
+package chapter1; // A grouping of classes. This must be declared first before anything in a file.
+
+import java.util.Scanner; // imports are statements that tie in required classes from other packages. 
+import java.nio.file.*;
+
+public class E1 {
+	
+	float n0 = 01101f; // Binary
+	double n1 = 0xFAF12; // Hexadecimal
+	long n2 = 056; // Octal
+	
+	double d1; double d2;
+	
+	public static void main(String[] args) throws ArrayIndexOutOfBoundsException {
+		
+		//System.out.println(args[0]); Throws an ArrayIndexOutOfBounds Exception, I guess I need the command line to enact this.
+		E1 e0 = new E1();
+		System.out.println("Dynamo");
+		
+		E1V2 e1 = new E1V2();
+		System.out.println(e1.num0);
+		
+		Integer num = null; // Reference types can be assigned a value of null.
+		// int num0 = null;  However, primitives cannot be assigned null.
+		
+		boolean b1 = false, b2;
+		
+		System.out.println(b1 + " " + num);
+		
+		System.out.println(n0 + " " + n1 + " " + n2);
+	}
+	
+	public void $Return1(String args[]) {
+		
+	}	
+	
+	public void $andAnotherReturn1(int n1, String... args) {
+		// varargs must be the last specified variable in a parameter list.
+	}
+	
+	public void _andAnotherReturn(boolean b1) {
+		
+	}
+	
+	public E1() {
+		// No-Args Constructor.
+		System.out.println("In Constructor");
+	}
+	
+	{int n0 = 1000; System.out.println(n0);} // instance initialiser block.
+	
+	static {boolean b0 = true; System.out.println(b0);}
+}
+
+class E1V2 {
+	
+	public int num0, num1 = 5; // num0 = 0, num = 5.
+
+	public int getNum0() {
+		return num0;
+	}
+	public void setNum0(int num0) {
+		this.num0 = num0;
+	}
+
+	public int getNum1() {
+		return num1;
+	}
+	public void setNum1(int num1) {
+		this.num1 = num1;
+	}
+}
+
+// public class E1V2 {} : Only one public class is allowed per file.
